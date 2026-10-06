@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-radar-bg text-radar-text font-mono antialiased selection:bg-radar-cyan selection:text-black;
+    overflow-x: hidden;
+  }
+}
+
+/* Radar Scanline & Glow effects */
+.radar-grid-bg {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(30, 41, 59, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.4) 1px, transparent 1px);
+}
+
+.radar-glow-green {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+}
+
+.radar-glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.35);
+}
+
+.radar-glow-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+}
+
+/* Custom scrollbar for tactical UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1220;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
